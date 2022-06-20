@@ -1,0 +1,30 @@
+<!-- <p>contact works!</p>
+
+<form [formGroup]="contactForm" (ngSubmit)="test()">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" formControlName="fname"><br>
+
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" formControlName="lname" ><br>
+    
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" formControlName="email"><br>
+
+    <br>
+    <button [disabled]="contactForm.invalid" type="submit">Enviar</button>
+</form>  -->
+
+<!-- <app-contacted [propHijo]="propPadre"></app-contacted> -->
+<!-- <app-contacted [itemHijo]="setName"></app-contacted> -->
+
+
+<form [formGroup]="itemsForm" (ngSubmit)="setFrutas()">
+    <label for ="item-input">Add a intem: </label>
+    <input type="text" id="item-input" formControlName="fruit">
+    <button type="submit">Add item</button>
+</form>
+<app-contacted [items]="elementos" (setItemValue)="addItem($event)"></app-contacted>
+
+<!-- <ul>
+    <li *ngFor="let item of items">{{item}}</li>
+  </ul> -->
